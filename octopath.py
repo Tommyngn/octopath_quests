@@ -32,6 +32,10 @@ app=Flask(__name__)
 #                 csv_writer.writerow([list2[1],'not complete'])
 
 
+@app.route('/')
+def hello():
+    return 'Hello World'
+
 @app.route('/reamaining_quests')
 def remaining_quests():
 
@@ -41,7 +45,7 @@ def remaining_quests():
     list_=list(csv.reader(csv_file))
     for pos1, i in enumerate(list_):
         if i[1] == 'not complete':
-            remain+=f'{i} <br>'
+            remain+=str(i) + '\n'
 
     return remain
 
@@ -87,7 +91,7 @@ def update():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
 
 
 
