@@ -16,7 +16,6 @@ kiwisolver==1.0.1
 MarkupSafe==1.1.1
 matplotlib==3.0.2
 numpy==1.16.1
-opencv-python==3.1.0.4
 psycopg2-binary==2.8.3
 PyJWT==1.5.3
 pymongo==3.6.1
